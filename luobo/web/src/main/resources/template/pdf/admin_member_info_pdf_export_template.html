@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>会员详情</title>
+</head>
+<body>
+<div class="content" style="width: 100%;">
+    <h2 style="text-align: center;">会员详情</h2>
+    <div>
+        <h3>个人账号信息</h3>
+        <div style="font-size: 14px;">
+            <label>姓名： ${info.name}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>性别：  <#if info.gender = 1>女</#if><#if info.gender = 0>男</#if></label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>联系人手机：  ${info.mobile}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>联系人邮箱：  ${info.email}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>联系人QQ号：  ${info.qq}</label>
+        </div>
+        <div style="padding: 5px 0; font-size: 14px;">
+            <label>出生日期：  <#if (info.birthday)??>${info.birthday?string("yyyy-MM-dd")}</#if></label>
+        </div>
+        <h3>银行账号信息</h3>
+        <div style="font-size: 14px;">
+            <label>银行选择： ${bank}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>银行卡号：  ${info.cardNum}</label>
+        </div>
+        <h3>个人联系信息</h3>
+        <div style="font-size: 14px;">
+            <label>详细家庭地址： ${info.address}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>身份证号：  ${info.idCard}</label>
+        </div>
+        <h3>个人学校</h3>
+        <div style="font-size: 14px;">
+            <label>学校： ${regionSchool.schoolRegionName} ${regionSchool.name}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>专业班级：  ${info.classOrDepartment}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>入学日期：  <#if (info.entrance)??>${info.entrance?string("yyyy-MM-dd")}</#if></label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>职位：  ${info.position}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>学校地址：  ${info.schoolOrCompanyAdd}</label>
+        </div>
+        <div style="padding: 5px 0; font-size: 14px;">
+            <label>宿舍地址：  ${info.presentAddress}</label>
+        </div>
+        <h3>家庭联系人信息</h3>
+        <table cellspacing="0" cellpadding="6" border="1" align="center" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 14px;">
+            <thead>
+            <tr>
+                <th></th>
+                <th>关系</th>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>工作单位</th>
+            </tr>
+            </thead>
+            <tbody>
+            <#list families as family>
+                <tr>
+                    <td>联系人</td>
+                    <td>${family.relationship}</td>
+                    <td>${family.name}</td>
+                    <td>${family.mobile}</td>
+                    <td>${family.company}</td>
+                </tr>
+            </#list>
+            </tbody>
+        </table>
+        <h3>其他联系人信息</h3>
+        <table cellspacing="0" cellpadding="6" border="1" align="center" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 14px;">
+            <thead>
+            <tr>
+                <th></th>
+                <th>关系</th>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>工作单位</th>
+            </tr>
+            </thead>
+            <tbody>
+            <#list contactsList as contacts>
+                <tr>
+                    <td>联系人</td>
+                    <td>${contacts.relationship}</td>
+                    <td>${contacts.name}</td>
+                    <td>${contacts.mobile}</td>
+                    <td>${contacts.company}</td>
+                </tr>
+            </#list>
+            </tbody>
+        </table>
+        <div style="padding-top: 5px;">
+            <label style="font-size: 14px; font-weight: bold;">备注：</label>
+            <div style="padding: 5px 0; line-height:22px; font-size: 12px;text-indent:2em;">
+                &nbsp;&nbsp;${info.comments}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

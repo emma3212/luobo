@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>订单详情</title>
+</head>
+<body>
+<div class="content" style="width: 100%;">
+    <h2 style="text-align: center;">订单详情</h2>
+    <div>
+        <h3>用户信息</h3>
+        <div style="font-size: 14px;">
+            <label>姓名： ${orderDto.userName}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>联系电话：  ${orderDto.userMobile}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>金额(元)：  ${orderDto.amount}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>状态：  ${orderDto.statusStr}</label>
+        </div>
+        <div style="padding: 5px 0; font-size: 14px;">
+            <label class="control-label">理由：${orderDto.reason}</label>
+        </div>
+        <h3>还款信息</h3>
+        <table class="table-form" cellspacing="0" cellpadding="6" border="1" align="center" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 14px;">
+            <thead>
+            <tr>
+                <th>计划还款金额(元)</th>
+                <th>实际还款金额(元)</th>
+                <th>最后期限</th>
+                <th>还款日期</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <#list repayList as repay>
+                <tr>
+                    <td>${repay.planRepayMoney}</td>
+                    <td>${repay.actualRepayMoney}</td>
+                    <td>
+                        <#if (repay.repayDeadline)??>
+                            ${repay.repayDeadline?string("yyyy-MM-dd HH:mm")}
+                        </#if>
+                    </td>
+                    <td>
+                        <#if (repay.actualRepayDate)??>
+                            ${repay.actualRepayDate?string("yyyy-MM-dd HH:mm")}
+                        </#if>
+                    </td>
+                    <td>
+                        <#if repay.status = 1>
+                            已还款
+                        </#if>
+                        <#if repay.status = 0>
+                            未还款
+                        </#if>
+                    </td>
+                </tr>
+            </#list>
+            </tbody>
+        </table>
+        <div style="padding-top: 5px;">
+            <label style="font-size: 14px; font-weight: bold;">管理员备注：</label>
+            <div style="padding: 5px 0; line-height:22px; font-size: 12px;text-indent:2em;">
+                &nbsp;&nbsp;${orderDto.adminComment}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

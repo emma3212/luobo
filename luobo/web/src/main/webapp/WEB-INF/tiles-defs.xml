@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <!-- Doc index page description  -->
+    <definition name="admin" template="/WEB-INF/views/admin/layout/main.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/admin/common/head.jsp"/>
+        <put-attribute name="extendHead" value=""/>
+        <put-attribute name="sidebar" value="/WEB-INF/views/common/admin_vip_sidebar.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/views/admin/common/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/admin/common/footer.jsp"/>
+        <put-attribute name="script" value="" />
+    </definition>
+
+    <definition name="vip" template="/WEB-INF/views/vip/layout/main.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/vip/common/head.jsp"/>
+        <put-attribute name="extendHead" value="" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/common/admin_vip_sidebar.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/views/vip/common/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/vip/common/footer.jsp"/>
+        <put-attribute name="script" value=""/>
+    </definition>
+
+    <definition name="pub" template="/WEB-INF/views/public/layout/main.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/public/common/head.jsp"/>
+        <put-attribute name="extendHead" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/public/common/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/public/common/footer.jsp"/>
+        <put-attribute name="script" value=""/>
+    </definition>
+
+    <definition name="wechat" template="/WEB-INF/views/wechat/layout/main.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/wechat/common/head.jsp"/>
+        <put-attribute name="extendHead" value=""/>
+        <put-attribute name="script" value=""/>
+    </definition>
+
+</tiles-definitions>

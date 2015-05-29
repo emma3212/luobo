@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>随意还订单详情</title>
+</head>
+<body>
+<div class="content" style="width: 100%;">
+    <h2 style="text-align: center;">订单详情</h2>
+
+    <div>
+        <h3>用户信息</h3>
+
+        <div style="font-size: 14px;">
+            <label>姓名： ${orderDto.userName}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>联系电话： ${orderDto.userMobile}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>金额(元)： ${orderDto.applyMoney}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>状态： ${orderDto.statusStr}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>生效日期： ${orderDto.startTimeStr}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>实际还款日期： ${orderDto.actualRepayDateStr}</label>
+        </div>
+        <div style="padding-top: 5px; font-size: 14px;">
+            <label>下单日期： ${orderDto.createdTimeStr}</label>
+        </div>
+        <div style="padding: 5px 0; font-size: 14px;">
+            <label class="control-label">原因：${orderDto.reason}</label>
+        </div>
+    </div>
+</div>
+</body>
+</html>

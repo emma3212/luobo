@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.luobo.mapper.CurrencyMapper">
+
+    <select id="queryCurrencyById" resultMap="pw.Currency">
+        SELECT * FROM t_currency
+        WHERE id = #{id}
+    </select>
+    <select id="listCurrency" resultMap="pw.Currency">
+        SELECT * FROM t_currency
+    </select>
+    <select id="queryCurrencyByName" resultMap="pw.Currency">
+        SELECT * FROM t_currency
+        WHERE `name` = #{name}
+    </select>
+</mapper>
