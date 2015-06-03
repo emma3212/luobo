@@ -12,20 +12,20 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
 	default-autowire="byName" default-lazy-init="false" >
 
-	<!--<mvc:annotation-driven />
+	<mvc:annotation-driven />
 
-    <mvc:interceptors>
-        &lt;!&ndash; 先进行登录验证 &ndash;&gt;
+     <mvc:interceptors>
+        <!-- 先进行登录验证 -->
         <bean class="com.luobo.web.interceptor.LoginInterceptor"  />
-        &lt;!&ndash; 在验证授权登录，判断是否有权限进来 &ndash;&gt;
+        <!-- 在验证授权登录，判断是否有权限进来 -->
         <bean class="com.luobo.web.interceptor.AuthorInterceptor" />
-        &lt;!&ndash; 模块菜单名称显示拦截器 &ndash;&gt;
+        <!-- 模块菜单名称显示拦截器 -->
         <bean class="com.luobo.web.interceptor.ModuleInterceptor" />
-        &lt;!&ndash; 手机或者PC客户端拦截器 &ndash;&gt;
-        &lt;!&ndash;<bean class="MobilePCInterceptor" />&ndash;&gt;
+        <!-- 手机或者PC客户端拦截器 -->
+        <!--<bean class="MobilePCInterceptor" />-->
     </mvc:interceptors>
 
-    <mvc:pandaworkDefault/>-->
+    <mvc:pandaworkDefault/>
 
     <!-- 解决/无法访问的问题 -->
     <!--<mvc:view-controller path="/" view-name="/login"/>-->
@@ -42,7 +42,6 @@
 
     <!-- SpringApplicationFilter -->
     <bean class="com.luobo.web.filter.SpringApplicationFilter" />
-
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
     <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
     <bean id="multipartResolver" class="com.pandawork.core.web.spring.fileupload.PandaworkCommonsMultipartResolver"> 

@@ -1,0 +1,258 @@
+.ads{
+	height: 133px;
+	border-top: 3px solid #ddd9da; 
+}
+.ads img{
+	display: block;
+	margin: -3px auto 0 auto;
+	width: 940px;
+}
+.holder{
+	background-color: #fff;
+	padding-top: 23px;
+	padding-bottom: 40px;
+}
+.holder .container{
+	margin: 0 auto;
+	padding: 0;
+	width: 940px;
+}
+.orange{
+	color: #fe6b01;
+}
+/***************************{面包屑 }******************************************/
+.crumb{
+	font-size: 16px;
+}
+.crumb li{
+	float: left;
+}
+.crumb .fa{
+	margin-right: 3px;
+}
+/****************************{商品信息}******************************************/
+.product-holder{
+	position: relative;
+	margin-top: 11px;
+	margin-bottom: 19px;
+	border: 1px solid #ececec;
+}
+.holder-img{
+	position: absolute;
+	top: 30px;
+	left: 46px;
+}
+.holder-img img{
+	width: 230px;
+	height: 336px;
+}
+.holder-info{
+	margin-left: 323px;
+	padding: 29px 45px;
+	border-left: 1px solid #ececec;
+}
+.holder-info h3{
+	font-size: 22px;
+	color: #6a6e73;
+}
+.holder-info .tip{
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-size: 16px;
+	color: #fe6b01;
+}
+.holder-info p{
+	position: relative;
+	margin-top: 20px;
+	line-height: 30px;
+}
+.holder-info .title{
+	position: absolute;
+	top: 0;
+	width: 90px;
+	font-size: 14px;
+}
+.holder-info .price{
+	margin-left: 90px;
+}
+.bigger{
+	font-size: 24px;
+	color: #fe6b01;
+}
+.first-pay{
+	display: block;
+	width: 111px;
+	height: 30px;
+	border: 1px solid #e6e6e6;
+	color: #bdbfc1;
+}
+.success{
+	border: 1px solid #7ec92b;
+}
+.error{
+	border: 1px solid #fe6b01;
+}
+.focus{
+	border: 1px solid #676767;
+}
+.error-tip{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 220px;
+	color: #fe6b01;
+}
+.first-pay input{
+	margin-left: 3px;
+	margin-right: 3px;
+	width: 90px;
+	height: 28px;
+	border: none;
+	color: #bdbfc1;
+	vertical-align: top;
+	line-height: 28px;
+}
+.staging-month a{
+	display: inline-block;
+	margin-right: 5px;
+	width: 50px;
+	border: 1px solid #e6e6e6;
+	color: #bdbfc1;
+	text-align: center;
+}
+.staging-month a:hover{
+	border: 1px solid #fe6b01;
+}
+.staging-month .active{
+	color: #6c7075;
+	font-weight: bold;
+	border: 1px solid #fe6b01;
+}
+p.totol-holder{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 16px;
+	color: #fe6b01;
+}
+.holder-info button{
+	background-color: #fe6b01;
+	padding: 5px 25px;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fefefe;
+	cursor: pointer;
+}
+.holder-info button:hover{
+	background-color: #f66904;
+}
+/************************{商品分类}*********************************************/
+.sub-nav {
+	float: left;
+	width: 220px;
+	margin-bottom: 79px;
+}
+.sub-nav h3{
+	padding-left: 12px;
+	background: url("/resources/img/pub/page/classify/sub-nav-h3-icon.png") no-repeat 191px 14px #fe6b01;
+	line-height: 42px;
+	font-size: 18px;
+	color: #fff;
+}
+.sub-nav-classify{
+	margin-bottom: 11px;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	background-color: #f3f3f3;
+}
+.sub-nav-classify a{
+	display: block;
+	padding-left: 36px;
+	border-bottom: 1px solid #e4e4e4;
+	background: url("/resources/img/pub/page/classify/sub-nav-classify.gif") no-repeat 12px 50%;
+	font-size: 16px;
+	line-height: 31px;
+	color: #6a6e73;
+}
+.sub-nav-classify a:hover{
+	background-color: #ffffff; 
+}
+.sub-nav-classify a.active{
+	line-height: 35px;
+	background-color: #ffffff;
+}
+.sub-nav h3.green-h3{
+	background-color: #00773e;
+}
+.hot-sales{
+	margin-bottom: 28px;
+}
+.hot-sales li{
+	margin-top: 5px;
+	border-bottom: 1px dotted #cccccc;
+}
+.hot-sales li a{
+	/*height: 87px;*/
+	display: block;
+	float: left;
+}
+.hot-sales .img{
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.hot-sales li .hot-sale-title{
+	height: auto;
+	display: block;
+	float: left;
+	width: 120px;
+	margin-top: 15px;
+	color: #333;
+	word-wrap: break-word; 
+	font-size: 12px;
+}
+.hot-sales img{
+	float: left;
+	width: 90px;
+	height: 110px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.hot-sales li .hot-sale-count{
+	height: 24px;
+	color: #333;
+	font-size: 12px;
+}
+.main .sub-nav-img{
+	display: block;
+	width: 220px;
+	height: 244px;
+}
+/*****************************{商品详情}*******************************************/
+.detail-info{
+	float: left;
+	width: 720px;
+}
+.detail-info h3{
+	background-color: #f3f3f3;
+	padding-left: 34px;
+	height: 41px;
+	line-height: 41px;
+	font-size: 14px;
+	color: #fe6b01;
+}
+.detail-main{
+	/*padding-left: 17px;*/
+	overflow: hidden;
+}
+/**********************{验证样式}********************************************/
+
+/**
+ * 清除IE浏览器获取焦点时删除和眼睛样式
+ * @type {[type]}
+ */
+.first-pay input::-ms-clear{
+ display: none;
+}
+.first-pay input::-ms-reveal{
+ display: none;
+}

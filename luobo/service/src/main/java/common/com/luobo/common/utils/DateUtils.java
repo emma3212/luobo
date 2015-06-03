@@ -17,6 +17,7 @@ public class DateUtils {
 
     private static final SimpleDateFormat DEFAULT_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm");
     private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy年MM月dd日");
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     /**
      * 获得当前时间
@@ -41,6 +42,15 @@ public class DateUtils {
      */
     public static String formatDatetime(Date date) {
         return DEFAULT_FORMAT.format(date);
+    }
+    /**
+     * 格式化日期时间
+     * 日期时间格式yyy-MM-dd HH:mm
+     *
+     * @return
+     */
+    public static String formatDate(Date date) {
+        return DATE_FORMAT.format(date);
     }
 
     /**

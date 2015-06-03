@@ -30,20 +30,20 @@ public class CurrencyServiceImpl implements CurrencyService {
     private CurrencyMapper currencyMapper;
 
     @Override
-    public void newCurrency(Currency currency) throws SSException {
+    public Currency newCurrency(Currency currency) throws SSException {
         if (Assert.isNull(currency)||Assert.isNull(currency.getName())) {
-            return;
+            return null;
         }
         if(this.queryNameIsExist(currency.getName())){
             throw SSException.get(LuoboException.CurrencyIsExist);
         }
         try {
-            commonDao.insert(currency);
+           currency = commonDao.insert(currency);
         } catch (Exception e) {
             LogClerk.errLog.error(e);
             throw SSException.get(LuoboException.NewCurrencyFailed);
         }
-
+        return currency;
     }
 
     @Override
@@ -87,6 +87,19 @@ public class CurrencyServiceImpl implements CurrencyService {
             throw SSException.get(LuoboException.QueryCurrencyFailed);
         }
         return currency;
+    }
+
+    @Override
+    public void delCurrencyById(int id) throws SSException {
+        if(Assert.lessOrEqualZero(id)){
+            return;
+        }
+        try{
+            commonDao.deleteById(Currency.class,id);
+        }catch (Exception e){
+            LogClerk.errLog.error(e);
+            throw SSException.get(LuoboException.NewCurrencyFailed);
+        }
     }
 
     @Override

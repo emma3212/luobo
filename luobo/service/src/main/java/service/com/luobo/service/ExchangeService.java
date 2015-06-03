@@ -20,6 +20,6 @@ public interface ExchangeService {
      * @return
      * @throws SSException
      */
-    public BigDecimal getResult(int fromCurrencyId,int toCurrencyId,
+    public BigDecimal getResult(Integer fromCurrencyId,Integer toCurrencyId,
                                 Date date, BigDecimal money) throws SSException;
 }

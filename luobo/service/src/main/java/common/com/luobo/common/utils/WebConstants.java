@@ -16,17 +16,6 @@ public class WebConstants {
         String temp = "";
         staticWebsite = (String) systemInstance.getProperty("staticWebsite");
         uploadWebsite = (String) systemInstance.getProperty("uploadWebsite");
-        wechatWebsite = (String) systemInstance.getProperty("wechatWebsite");
-
-        //第翼短信平台
-        temp = (String) systemInstance.getProperty("eeSign");
-        try {
-            eeSign = new String(temp.getBytes("ISO-8859-1"), "UTF-8");
-        }catch (UnsupportedEncodingException e){
-            LogClerk.errLog.error(e.getMessage());
-            eeSign = "";
-        }
-        eeURL = (String) systemInstance.getProperty("eeURL");
 
         temp = (String) systemInstance.getProperty("webTitle");
         try {
@@ -67,11 +56,8 @@ public class WebConstants {
     // 文件上传服务器地址
     public static final String uploadWebsite;
 
-    public static final String wechatWebsite;
 
-    // 第翼短信平台
-    public static String eeSign;
-    public static final String eeURL;
+
 
     // 用户ID
     public static final String WebUserId = "web_user_id";

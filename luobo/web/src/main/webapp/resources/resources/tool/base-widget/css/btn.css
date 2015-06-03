@@ -1,0 +1,587 @@
+/*-----------------------------------------------------------------------------
+* @Description: 所有的按钮样式 (btn.css)
+* @Version: 	V1.0.0
+* @author: 		huanhuan(965788210@qq.com)
+* @date			2014.05.22
+* ==NOTES:=============================================
+* v1.0.0(2014.05.22):
+* 	初始生成 
+* ---------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.0.1');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.btn{
+	display: inline-block;
+	height: 16px;
+	max-width: 15em;
+	padding: 6px 14px;
+	/*margin: 3px;*/
+	background-color: #e5e5e5;
+	color: #333;
+	font-family: 'Microsoft YaHei', sans-serif, Arial;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	cursor: pointer;
+	word-break: keep-all;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+}
+.btn-big{
+	display: inline-block;
+	height: 25px;
+	max-width: 15em;
+	padding: 5px 14px;
+	/*margin: 3px;*/
+	background-color: #e5e5e5;
+	color: #333;
+	font-family: 'Microsoft YaHei', sans-serif, Arial;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	cursor: pointer;
+	word-break: keep-all;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+button.btn-big{
+	height: 32px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	vertical-align: top;
+}
+button.btn{
+	height: 30px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	vertical-align: top;
+}
+.btn:hover{
+	background-color: #d8d8d8;
+}
+.btn-ok{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px 8px no-repeat;
+}
+.btn-next{
+	padding: 7px 25px 7px 10px;
+	background: url(../img/common/btn-icon.png) 49px -17px no-repeat;
+}
+.btn-prev{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -42px no-repeat;
+}
+.btn-add-file{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -68px no-repeat;
+}
+.btn-upload{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -93px no-repeat;
+}
+.btn-download{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -118px no-repeat;
+}
+.btn-cancel{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -143px no-repeat;
+}
+.btn-delete{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -167px no-repeat;
+}
+.btn-delete-file{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -194px no-repeat;
+}
+.btn-import{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -218px no-repeat;
+}
+.btn-export{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -243px no-repeat;
+}
+.btn-add-folder{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -268px no-repeat;
+}
+.btn-delete-folder{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -293px no-repeat;
+}
+.btn-home{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -318px no-repeat;
+}
+.btn-mail-readed{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -340px no-repeat;
+}
+.btn-mail-unread{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -365px no-repeat;
+}
+.btn-repeal{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -390px no-repeat;
+}
+.btn-login{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -417px no-repeat;
+}
+.btn-search{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -441px no-repeat;
+}
+.btn-refresh{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -467px no-repeat;
+}
+.btn-tip{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -492px no-repeat;
+}
+.btn-empty{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -518px no-repeat;
+}
+.btn-save{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -544px no-repeat;
+}
+.btn-lock{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -569px no-repeat;
+}
+.btn-unlock{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -594px no-repeat;
+}
+.btn-edit{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -618px no-repeat;
+}
+.btn-add{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -644px no-repeat;
+}
+.btn-up{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -669px no-repeat;
+}
+.btn-down{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -694px no-repeat;
+}
+.btn-valid{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -719px no-repeat;
+}
+.btn-detail{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -744px no-repeat;
+}
+.btn-loading{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -769px no-repeat;
+}
+.btn-voice{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -794px no-repeat;
+}
+.btn-communicate{
+	padding: 6px 10px 6px 25px;
+	background: url(../img/common/btn-icon.png) 4px -819px no-repeat;
+}
+.btn-icon{
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	text-indent: -9999px;
+}
+.btn-big-icon{
+	height: 33px;
+	margin-left: -6px;
+	padding: 0 10px;
+}
+.btn-icon.btn-ok{
+	background-position: center 7px;
+}
+.btn-icon.btn-next{
+	background-position: center -19px;
+}
+.btn-icon.btn-prev{
+	background-position: center -44px;
+}
+.btn-icon.btn-add-file{
+	background-position: center -70px;
+}
+.btn-icon.btn-upload{
+	background-position: center -95px;
+}
+.btn-icon.btn-download{
+	background-position: center -120px;
+}
+.btn-icon.btn-cancel{
+	background-position: center -145px;
+}
+.btn-icon.btn-delete{
+	background-position: center -169px;
+}
+.btn-icon.btn-delete-file{
+	background-position: center -195px;
+}
+.btn-icon.btn-import{
+	background-position: center -220px;
+}
+.btn-icon.btn-export{
+	background-position: center -245px;
+}
+.btn-icon.btn-add-folder{
+	background-position: center -270px;
+}
+.btn-icon.btn-delete-folder{
+	background-position: center -295px;
+}
+.btn-icon.btn-home{
+	background-position: center -320px;
+}
+.btn-icon.btn-mail-readed{
+	background-position: center -343px;
+}
+.btn-icon.btn-mail-unread{
+	background-position: center -368px;
+}
+.btn-icon.btn-repeal{
+	background-position: center -392px;
+}
+.btn-icon.btn-login{
+	background-position: center -420px;
+}
+.btn-icon.btn-search{
+	background-position: center -444px;
+}
+.btn-icon.btn-refresh{
+	background-position: center -470px;
+}
+.btn-icon.btn-tip{
+	background-position: center -495px;
+}
+.btn-icon.btn-empty{
+	background-position: center -520px;
+}
+.btn-icon.btn-save{
+	background-position: center -545px;
+}
+.btn-icon.btn-lock{
+	background-position: center -570px;
+}
+.btn-icon.btn-unlock{
+	background-position: center -595px;
+}
+.btn-icon.btn-edit{
+	background-position: center -620px;
+}
+.btn-icon.btn-add{
+	background-position: center -645px;
+}
+.btn-icon.btn-up{
+	background-position: center -670px;
+}
+.btn-icon.btn-down{
+	background-position: center -695px;
+}
+.btn-icon.btn-valid{
+	background-position: center -720px;
+}
+.btn-icon.btn-detail{
+	background-position: center -745px;
+}
+.btn-icon.btn-loading{
+	background-position: center -770px;
+}
+
+.btn-blue{
+	background-color: #4D90FE;
+    color: #fff;
+}
+.btn-blue:hover{
+	background-color: #0362fd;
+}
+.btn-purple{
+	background-color: #852B99;
+	color: #fff;
+}
+.btn-purple:hover{
+	background-color: #6d1b81;
+}
+.btn-green{
+	background-color: #35AA47;
+	color: #fff;
+}
+.btn-green:hover{
+	background-color: #1d943b;
+}
+.btn-red{
+	background-color: #E02222;
+	color: #fff;
+}
+.btn-red:hover{
+	background-color: #B62020;
+}
+.btn-yellow{
+	background-color: #FFB848;
+	color: #fff;
+}
+.btn-yellow:hover{
+	background-color: #EDA636;
+}
+button.btn-disabled{
+	background-color: #B4B4B4;
+	cursor: default;
+}
+.btn-disabled:hover{
+	background-color: #B4B4B4;
+}
+/**
+ * btn.html(boman)
+ * by puronglong
+ * 2014-8-21
+ */
+.portlet.box.blue {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #b4cef8 #b4cef8;
+    border-image: none;
+    border-right: 1px solid #b4cef8;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+}
+.portlet.box {
+    padding: 0 !important;
+}
+.portlet > .portlet-body.blue, .portlet.blue {
+    background-color: #4b8df8 !important;
+}
+.portlet {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+}
+.portlet > .portlet-title > .caption {
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 0 8px;
+    padding: 0;
+}
+.portlet > .portlet-title:after {
+    clear: both;
+}
+.portlet > .portlet-title:after, .portlet > .portlet-title:before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.portlet.box > .portlet-body {
+    background-color: #fff;
+    padding: 10px;
+}
+.portlet > .portlet-body {
+    clear: both;
+    padding: 0;
+}
+div, input, select, textarea, span, img, table, td, th, p, a, button, ul, code, pre, li {
+    border-radius: 0 !important;
+}
+.portlet-title > .caption >i,
+ {
+    color: #fff;
+}
+.portlet-title > .caption{
+	color: #fff;
+}
+.btn-awesome {
+	font-family: 'FontAwesome';
+	font-size: 18px;
+    background-color: #fafafa !important;
+    background-image: none !important;
+    border: 1px solid #ddd;
+    box-shadow: none !important;
+    color: #646464 !important;
+    cursor: pointer;
+    display: inline-block !important;
+    filter: none !important;
+    height: 60px;
+    margin: 5px 5px 0 0;
+    min-width: 80px;
+    padding: 12px 0 0;
+    position: relative;
+    text-align: center;
+    text-shadow: none !important;
+    transition: all 0.3s ease 0s !important;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.btn-awesome div {
+    color: #000;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+.btn-awesome .badge {
+    border-radius: 12px !important;
+    border-style: solid;
+    border-width: 0;
+    box-shadow: none;
+    color: white !important;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 11px !important;
+    font-weight: 300;
+    line-height: 18px;
+    position: absolute;
+    right: -5px;
+    text-shadow: none;
+    top: -5px;
+    line-height: 1;
+}
+.badge-green {
+    background-color: #3cc051;
+    background-image: none !important;
+}
+.badge-blue {
+    background-color: #57b5e3;
+    background-image: none !important;
+}
+.badge-purple{
+	background-color: #852b99;
+	background-image: none !important;
+}
+.badge-yellow{
+	background-color: #ffb848;
+	background-image: none !important;
+}
+.badge-default{
+	background-color: #e5e5e5;
+	background-image: none !important;
+}
+.badge-dark{
+	background-color: #555555;
+	background-image: none !important;
+}
+.portlet-title > .tools, 
+.portlet-title > .actions {
+    display: inline-block;
+    float: right;
+    margin: 6px 0 0;
+    padding: 0;
+}
+.portlet-title > .tools > a.collapse {
+    background-image: url("/resources/img/admin/common/portlet-collapse-icon-white.png");
+}
+.portlet-title > .tools > a.remove{
+	background-image:url("/resources/img/admin/common/portlet-remove-icon-white.png");
+}
+.portlet-title > .tools > a{
+    display: inline-block;
+    height: 16px;
+    margin-left: 5px;
+}
+.portlet-title > .tools > a.remove {
+	background-repeat: no-repeat;
+    margin-bottom: 2px;
+    width: 11px;
+}
+.portlet-title > .tools > a.collapse{
+	display: inline-block;
+    margin-bottom: 2px;
+    width: 14px;
+}
+/*.btn {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}*/
+.btn-group:before {
+  content: "\f0c0";
+}
+.btn-barcode:before {
+  content: "\f02a";
+}
+.btn-bar-chart-o:before {
+  content: "\f080";
+}
+.btn-sitemap:before {
+  content: "\f0e8";
+}
+.btn-calendar:before {
+  content: "\f073";
+}
+.btn-envelope:before {
+  content: "\f0e0";
+}
+.btn-bullhorn:before {
+  content: "\f0a1";
+}
+.btn-map-marker:before {
+  content: "\f041";
+}
+.btn-money:before {
+  content: "\f0d6";
+}
+.btn-plane:before {
+  content: "\f072";
+}
+.btn-thumbs-up:before {
+  content: "\f164";
+}
+.btn-cloud:before {
+  content: "\f0c2";
+}
+.btn-globe:before {
+  content: "\f0ac";
+}
+.btn-heart-empty:before{
+  height: 14px;
+}
+.btn-heart-empty div{
+	margin-top: 18px;
+}
+/************************ 并列两个button start*****************************/
+.btn-margin-right{
+	margin-right: 15px;
+}
+/************************ 并列两个button end*****************************/
+.h30{
+	height: 30px;
+}
+.h50{
+	height: 50px;
+}
+.h80{
+	height: 80px;
+}
+

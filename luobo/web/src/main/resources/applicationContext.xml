@@ -29,5 +29,5 @@
 	<!-- 导入其他配置文件 -->
     <import resource="database-config.xml"></import>
     <import resource="mvc-config.xml"></import>
-
+    <import resource="shiro-web.xml"></import>
 </beans>

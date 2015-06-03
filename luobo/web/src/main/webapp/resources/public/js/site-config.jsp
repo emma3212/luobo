@@ -70,7 +70,7 @@
             // 首页登录与注册
             login:{
                 // 登录提交
-                check: site.website + 'ajax/login',
+                check: site.website + 'login/ajax/login',
                 // 发送用户的手机号
                 sendMobile: site.website + 'ajax/query/exist',
                 // 注册表单提交

@@ -1,0 +1,110 @@
+.dropdown-container{
+	position: relative;
+	width:160px;
+	font-size: 12px;
+	
+}
+.dropdown-container button{
+	position: relative;
+	padding:6px 9px 9px 9px;
+	color: #000;
+	font-family: 'Microsoft YaHei', sans-serif, Arial;
+}
+.dropdown-container i{
+	width:auto;
+}
+.dropdown-container .dropdown-box{
+	display: none;
+	width:158px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+.dropdown-box  li a{
+	display: block;
+	padding: 6px 0;
+	line-height: 18px;
+    color: #333;
+    text-align: center;
+}
+.dropdown-container button:hover{
+	color: #333
+	
+}
+.dropdown-box li a:hover{
+	background-color: #e5e5e5;
+	
+}
+.dropdown-box li a:hover i{
+	color: #bbb;
+	
+}
+.hide + .dropdown-box{
+	position: absolute;
+	top:30px;
+	right:0px;
+}
+.show + .dropdown-box{
+	display: none;
+}
+/******************** 带箭头的button-dropdown***************************/
+.dropdown-new-box:before {
+    border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: -7px;
+}
+.dropdown-new-box:after {
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: -5px;
+}
+.dropdown-new-box {
+    background-color: #fff;
+    padding: 1px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    right: -5px;
+    top: 40px;
+    width: 180px;
+    z-index: 30;
+    
+}
+.dropdown-new-box  a{
+	display: inline-block;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	color:#333;
+}
+.dropdown-new-box  a i{
+	display: inline-block;
+	width: 20px;
+	color: #a9afb4;
+}
+.dropdown-container .new-box{
+	right: 4px;
+    top: 80px;
+    width: 160px;
+}
+.dropdown-container .new-box a{
+	width: 140px;
+}
+.dropdown-container .new-box a:hover{
+	background-color: #55c4ab;
+	color: #fff;
+}
+/******************** 带箭头的button-dropdown***************************/

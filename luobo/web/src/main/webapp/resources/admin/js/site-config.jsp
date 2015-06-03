@@ -94,11 +94,11 @@
                 //会员类型
                 type: {
                     //启用禁用
-                    enlight: site.website + 'admin/member/type/ajax/cancel',
+                    enlight: site.website + 'admin/currency/ajax/del',
                     //编辑
-                    edit: site.website + 'admin/member/type/ajax/update',
+                    edit: site.website + 'admin/currency/ajax/update',
                     //新建
-                    newType: site.website + 'admin/member/type/ajax/new'
+                    newType: site.website + 'admin/currency/ajax/new'
                 },
                 // 修改会员状态
                 updateStatus: site.website + 'admin/member/ajax/update/status',

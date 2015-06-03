@@ -51,11 +51,11 @@ public class RateTest extends AbstractTestCase {
     public void list(){
         List<Rate> currencyList = new ArrayList<Rate>();
 
-        try {
+      /*  try {
             currencyList = rateService.listRate();
             System.out.println(currencyList);
         } catch (SSException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

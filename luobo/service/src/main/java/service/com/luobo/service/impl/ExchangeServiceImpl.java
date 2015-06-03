@@ -8,6 +8,7 @@ import com.luobo.service.RateService;
 import com.pandawork.core.exception.SSException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -17,15 +18,16 @@ import java.util.Date;
  * @Author:liaom
  * @Time: 2015/5/29 14:33.
  */
+@Service("exchangeService")
 public class ExchangeServiceImpl implements ExchangeService {
 
     @Autowired
     @Qualifier("rateService")
     private RateService rateService;
 
-    public BigDecimal getResult(int fromCurrencyId, int toCurrencyId,
+    public BigDecimal getResult(Integer fromCurrencyId, Integer toCurrencyId,
                                 Date date, BigDecimal money) throws SSException{
-        if(Assert.lessOrEqualZero(fromCurrencyId) ||
+        if(Assert.isNull(fromCurrencyId)||Assert.isNull(toCurrencyId)||Assert.lessOrEqualZero(fromCurrencyId) ||
                 Assert.lessOrEqualZero(toCurrencyId)){
             return null;
         }
@@ -35,6 +37,6 @@ public class ExchangeServiceImpl implements ExchangeService {
         if(Assert.isNull(rate) && fromCurrencyId!=toCurrencyId){
             throw SSException.get(LuoboException.RateNotExist);
         }
-        return r.multiply(money);
+        return rate.getRate().multiply(money);
     }
 }

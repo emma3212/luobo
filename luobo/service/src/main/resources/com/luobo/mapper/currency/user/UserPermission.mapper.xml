@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.luobo.mapper.user.UserPermissionMapper">
+
+    <select id="queryPermissionByLoginName" resultMap="pw.UserPermission">
+        SELECT p.*
+        FROM t_user u
+        LEFT JOIN t_user_group_permission gp ON u.group_id = gp.group_id
+        LEFT JOIN t_user_permission p ON gp.permission_id = p.id
+        WHERE u.login_name = #{loginName}
+    </select>
+
+    <select id="queryPermissionByUserId" resultMap="pw.UserPermission">
+        SELECT p.*
+        FROM t_user u
+        LEFT JOIN t_user_group_permission gp ON u.group_id = gp.group_id
+        LEFT JOIN t_user_permission p ON gp.permission_id = p.id
+        WHERE u.id = #{userId}
+    </select>
+
+</mapper>

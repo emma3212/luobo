@@ -1,0 +1,234 @@
+
+.main{
+	background-color: #ffffff;
+	width: 100%
+}
+.ads-img{
+	display: block;
+	width: 940px;
+	margin: 0 auto 20px;
+}
+.classify-container{
+	width: 940px;
+	margin: 0 auto;
+}
+.sub-nav {
+	float: left;
+	width: 220px;
+	margin-right: 20px;
+}
+.sub-nav h3{
+	padding-left: 12px;
+	background: url("/resources/img/pub/page/classify/sub-nav-h3-icon.png") no-repeat 191px 14px #fe6b01;
+	line-height: 42px;
+	font-size: 18px;
+	color: #fff;
+}
+.sub-nav-classify{
+	margin-bottom: 11px;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	background-color: #f3f3f3;
+}
+.sub-nav-classify a{
+	display: block;
+	padding-left: 36px;
+	border-bottom: 1px solid #e4e4e4;
+	background: url("/resources/img/pub/page/classify/sub-nav-classify.gif") no-repeat 12px 50%;
+	font-size: 16px;
+	line-height: 35px;
+	color: #6a6e73;
+}
+.sub-nav-classify a:hover{
+	background-color: #ffffff; 
+}
+.sub-nav-classify a.active{
+	line-height: 40px;
+	background-color: #ffffff;
+}
+.sub-nav h3.green-h3{
+	background-color: #00773e;
+}
+.hot-sales{
+	margin-bottom: 28px;
+}
+.hot-sales li{
+	margin-top: 5px;
+	border-bottom: 1px dotted #cccccc;
+}
+.hot-sales li a{
+	/*height: 122px;*/
+	display: block;
+	float: left;
+}
+.hot-sales .img{
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.hot-sales li .hot-sale-title{
+	height: auto;
+	display: block;
+	float: left;
+	width: 120px;
+	margin-top: 15px;
+	color: #333;
+	word-wrap: break-word; 
+	font-size: 12px;
+}
+.hot-sales img{
+	width: 90px;
+	height: 110px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	float: left;
+}
+.hot-sales li .hot-sale-count{
+	height: 24px;
+	color: #333;
+	font-size: 12px;
+}
+.product-box{
+	float: left;
+	width: 700px;
+}
+.product-box-classify{
+	line-height: 42px;
+	font-size: 16px;
+	color: #6a6e73;
+}
+.product-box-classify span{
+	color: #fe6b01;
+}
+.product-select label{
+	display: block;
+	float: left;
+	line-height: 29px; 
+	color: #6a6e73; 
+	font-size: 14px;
+}
+.product-select  div{
+	float: left;
+	width: 625px;
+}
+.product-select  div ul.hide-brand{
+	height: 30px;
+	overflow: hidden;
+}
+.product-select div .all{
+	display: block;
+	float: left;
+	width: 38px;
+	height: 19px;
+	margin-right: 10px;
+	margin-top: 5px;
+	line-height: 19px;
+	background-color:#fe6b01; 
+	text-align: center;
+	color: #fff5ee;
+}
+.product-box .product-select ul{
+	float: left;
+	width: 550px;
+	font-size: 14px;
+	color: #fe6b01;
+}
+.product-box .product-select ul li{
+	float: left;
+	height: 29px;
+}
+.product-box .product-select ul a{
+	display: block;
+	height: 29px;
+	margin-right: 12px;
+	line-height: 29px;
+	color: #fe6b01;
+	font-size: 12px;  
+}
+.product-box .product-select ul a:hover,.product-select  a.spread:hover,.product-select  a.spread:focus,
+.sub-nav-classify a:hover,.sub-nav-classify a:focus,.rank-title a:hover,.rank-title a:focus,
+.show-imgs a:hover,.show-imgs a:focus,.hot-sales a:hover, .hot-sales a:focus{
+	outline: none;
+}
+.product-box .product-select ul a.change-color{
+	display: block;
+	float: left;
+	padding: 0 5px;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: 5px;
+	line-height: 18px;
+	background-color:#fe6b01; 
+	text-align: center;
+	color: #fff5ee;
+}
+.product-select  .spread{
+	display: none;
+	float: right;
+	margin-top: 6px;
+	margin-right: 8px;
+	color: #fe6b01;
+}
+.rank-title{
+	height: 41px;
+	padding-left: 19px;
+	margin-top: 19px;
+	border: 1px solid #e4e4e4;
+	background-color: #efefef;
+	font-size: 14px;
+}
+.rank-title a{
+	padding-right: 31px;
+	line-height:41px; 
+	color: #73777b;
+}
+.rank-title a.arrow-bottom{
+	background:url("/resources/img/pub/page/classify/arrow-bottom.gif") no-repeat 32px 64%; 
+}
+.rank-title a.arrow-top{
+	background:url("/resources/img/pub/page/classify/arrow-top.gif") no-repeat  32px 64%; 
+}
+.rank-title a.rank-color{
+	color: #fe6b01; 
+}
+.rank-title p{
+	float: right;
+	margin-right: 18px;
+	line-height:41px;
+}
+.page-color{
+	color: #fe6b01;
+}
+.show-imgs {
+	border-left: 1px solid #e4e4e4;
+}
+.show-imgs li{
+	width: 232px;
+	height: 338px;
+}
+.show-imgs li a{
+	display: block;
+	padding: 1px;
+	width: 230px;
+	height: 336px;
+}
+.show-imgs li a img{
+	width: 230px;
+	height: 336px;
+}
+.show-imgs li a:hover{
+	border: 1px solid #fe6b01;
+	padding: 0;
+}
+.show-imgs li{
+	float: left;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+.show-imgs img{
+	width: 232px;
+	height:338px;
+}
+div.pagination-margin{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}

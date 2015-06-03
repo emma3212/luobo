@@ -1,0 +1,239 @@
+body{
+	background-color: #f4f4f4;
+	font-size: 12px;
+	color: #343741;
+}
+.header{
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 86px;
+    z-index: 30;
+    background-color: #343741;
+}
+.login-center{
+	position: relative;
+	padding-bottom: 60px;
+	width:458px; 
+	/*height:478px;*/
+	margin: 88px auto 32px;
+	border-top: 3px solid #cccdcf;
+	background-color: #fff;
+	box-shadow:  0px 6px 13px 0px #888888;
+	-webkit-box-shadow:  0px 6px 13px 0px #888888;
+}
+.login-center h1{
+	width: 170px;
+	margin: 28px auto 0px;
+	font-size: 28px;
+}
+.msg-tip{
+	position: absolute;
+	top: 72px;
+	width:458px;
+	text-align: center;
+	color: #eb5242;
+}
+.register-err-tip{
+	position: absolute;
+	top: 415px;
+	width:458px;
+	text-align: center;
+	color: #eb5242;
+}
+.login-center form{
+	width:400px; 
+	margin: 28px auto 0px;
+	font-size: 12px;
+	color: #69717d;
+}
+.inline .pw-tip{
+	display: block;
+	width: 310px;
+    margin-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: static;
+    line-height: 28px;
+    background-color: #ffebba;
+    -moz-border-radius: 3px !important;      
+    -webkit-border-radius: 3px !important;   
+    border-radius:3px !important;
+}
+.inline .success-state{
+	display: none;
+}
+.control-group .controls input{
+	height: 26px;
+	border-color: #d9d9d9; 
+	-moz-border-radius: 3px !important;      
+    -webkit-border-radius: 3px !important;   
+    border-radius:3px !important; 
+}
+.controls{
+	margin-left: 62px;
+}
+.control-label{
+	width: 54px;
+}
+.control-group .controls span{
+	font-size: 12px;
+	color: #ac2b2b;
+}
+.member-icon .controls input{
+	width: 307px;
+	background:url('') 98% 50% no-repeat;
+}
+.password .controls input{
+	width: 307px;
+	background:url('') 98% 50% no-repeat;
+}
+.control-group  .controls  .success-field{
+	background:url('') 98% 50% no-repeat;
+}
+.code .controls input{
+	width: 110px;
+	background: none;
+}
+.code{
+	float: left;
+	width: 200px;
+}
+.code-img{
+	float: left;
+	width: 88px;
+	height:31px;
+	margin-top: 3px;
+}
+.refresh{
+	margin-left: 10px;
+	margin-top: 19px;
+	line-height: 43px;
+	color: #3174b8;
+}
+.tips{
+	width: 100%;
+	margin-top: 16px;
+	margin-bottom: 17px;
+	clear:both;
+}
+.tips .checkbox-container{
+	display: inline-block;
+	height:19px; 
+	width:19px;
+	margin-left: 60px;
+	background-image: url('');
+	background-position: 0 -260px;
+}
+.tips .checkbox-checked{
+	background-position: -76px -260px;
+}
+.checkbox-container input{
+	opacity: 0;
+	margin: 2px;
+}
+.remember{
+	color: #444d5c;
+}
+.login-qq{
+	display: inline-block;
+	margin-left: 76px;
+	padding-left:20px; 
+	background:url('') no-repeat;
+	color: #226ab3;
+}
+.btn-loading{
+	background-image: none;
+}
+.login-center form .login-btn{
+	height: 45px;
+	width: 325px;
+	max-width: 280px;
+	margin-left: 60px;
+	margin-right: 0px;
+	font-size: 18px;
+}
+.login-center form .register-btn{
+	height: 45px;
+	width: 325px;
+	max-width: 280px;
+	margin-left: 60px;
+	margin-right: 0px;
+	background-color: #69859b; 
+	font-size: 18px;
+}
+.register-tip{
+	display: block;
+	line-height: 25px;
+	width: 100%;
+	margin-top: 25px;
+	border-top: 1px solid #e5e5e5;
+	color: #000;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: left;
+}
+.go-home{
+	position: absolute;
+	height:34px; 
+	width:36px;
+	padding-top: 7px;
+	bottom: 10px;
+	right: -36px;
+	background-color: #54c2a9;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+}
+.relation-way{
+	width:458px; 
+	margin: 0 auto;
+	color: #999999; 
+}
+.relation-way h1{
+	width: 100%;
+	margin: 30px 0px; 
+	text-align: center;
+}
+.service{
+	float: left;
+	width: 152px;
+}
+.service-logo{
+	width: 65px;
+	height: 66px;
+	margin: 0px auto 10px;
+	text-align: center;
+}
+.service-logo i{
+	margin-top: 15px;
+	color: #fff;
+	font-size: 34px;
+}
+.service-way{
+	width: 100%;
+	line-height: 22px;
+	text-align: center;
+}
+.service-phone .service-logo{
+	background-color: #ff7200;
+}
+.service-qq .service-logo{
+	background-color: #268ce3;
+}
+.service-boman .service-logo{
+	background:url('') no-repeat;
+}
+.login-footer{
+	margin-top: 210px;
+	height: 53px;
+	background-color: #343741;
+}
+.login-footer-center{
+	width: 1220px;
+	margin: 0px  auto;
+}
+.btn-group:before {
+    content: "";
+}

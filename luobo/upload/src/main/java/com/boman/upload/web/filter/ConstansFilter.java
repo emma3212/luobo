@@ -37,17 +37,17 @@ public class ConstansFilter extends AbstractConstansFilter {
 
     @Override
     public String getWebfullName() {
-        return "boman upload";
+        return "luobo upload";
     }
 
     @Override
     public String getWebName() {
-        return "boman upload";
+        return "luobo upload";
     }
 
     @Override
     public String getWebTitle() {
-        return "boman upload";
+        return "luobo upload";
     }
 
     @Override

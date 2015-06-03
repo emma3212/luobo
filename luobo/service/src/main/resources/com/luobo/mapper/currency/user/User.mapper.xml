@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.luobo.mapper.user.UserMapper">
+
+    <select id="queryUserByLoginName" resultMap="pw.User">
+        SELECT * FROM t_user WHERE login_name = #{loginName}
+    </select>
+
+    <select id="countLoginName" resultType="int">
+        SELECT COUNT(1) FROM t_user
+        WHERE login_name = #{loginName}
+    </select>
+
+    <update id="updatePwdById">
+        UPDATE t_user SET pwd = #{pwd} WHERE id=#{id}
+    </update>
+
+
+</mapper>

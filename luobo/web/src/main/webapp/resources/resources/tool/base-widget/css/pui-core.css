@@ -1,0 +1,14 @@
+/*-----------------------------------------------------------------------------
+* @Description:     pui的css
+* @Version:         1.0.0
+* @author:          kt(928841785@qq.com)
+* @date             2015.1.4
+* ==NOTES:=============================================
+* v1.0.0(2015.1.4):
+*   初始生成
+*---------------------------------------------------------------------------*/
+@import url(dialog.css);
+@import url(progressbar.css);
+@import url(tooltip.css);
+@import url(panel.css);
+@import url(pagination.css);

@@ -39,5 +39,13 @@ public interface RateMapper {
      * @return
      * @throws Exception
      */
-    public List<Rate> listRate() throws Exception;
+    public List<Rate> listRate(@Param("fromCurrencyId") Integer fromCurrencyId,
+                               @Param("toCurrencyId") Integer toCurrencyId,
+                               @Param("date") Date date,
+                               @Param("offset") int offset,
+                               @Param("pageSize") int pageSize) throws Exception;
+
+    public int countRate(@Param("fromCurrencyId") Integer fromCurrencyId,
+                         @Param("toCurrencyId") Integer toCurrencyId,
+                         @Param("date") Date date) throws Exception;
 }

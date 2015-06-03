@@ -16,7 +16,7 @@ public interface CurrencyService {
      * @param currency
      * @throws SSException
      */
-    public void newCurrency(Currency currency) throws SSException;
+    public Currency newCurrency(Currency currency) throws SSException;
 
     /**
      * 修改币种
@@ -39,6 +39,13 @@ public interface CurrencyService {
      * @throws SSException
      */
     public Currency queryCurrencyById(int id) throws SSException;
+    /**
+     * 根据id删除货币
+     * @param id
+     * @return
+     * @throws SSException
+     */
+    public void delCurrencyById(int id) throws SSException;
 
     /**
      * 根据币种名称获取货币

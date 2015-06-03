@@ -3,6 +3,7 @@ package com.luobo.service;
 import com.luobo.common.entity.Rate;
 import com.pandawork.core.exception.SSException;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.List;
 
@@ -44,5 +45,26 @@ public interface RateService {
                                   Integer toCurrencyId,
                                   Date date) throws SSException;
 
-    public List<Rate> listRate() throws SSException;
+    /**
+     * 列表
+     * @param fromCurrencyId
+     * @param toCurrencyId
+     * @param date
+     * @param curPage
+     * @param pageSize
+     * @return
+     * @throws SSException
+     */
+    public List<Rate> listRate(Integer fromCurrencyId,Integer toCurrencyId,Date date,int curPage,int pageSize) throws SSException;
+
+    /**
+     * 计算个数
+     * @param fromCurrencyId
+     * @param toCurrencyId
+     * @param date
+     * @return
+     * @throws SSException
+     */
+    public int countRate(Integer fromCurrencyId,Integer toCurrencyId,Date date) throws SSException;
+    public void exportRateToExcel(Integer fromCurrencyId,Integer toCurrencyId,Date date, HttpServletResponse response) throws SSException;
 }

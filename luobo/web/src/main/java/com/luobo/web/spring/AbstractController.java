@@ -5,9 +5,11 @@ import com.luobo.common.enums.CookieNameEnums;
 import com.luobo.common.exception.LuoboException;
 import com.luobo.common.utils.CookieUtil;
 import com.luobo.common.utils.WebConstants;
-import com.luobo.service.CurrencyService;
-import com.luobo.service.ExchangeService;
-import com.luobo.service.RateService;
+import com.luobo.service.*;
+import com.luobo.service.login.LoginManageService;
+import com.luobo.service.user.UserGroupService;
+import com.luobo.service.user.UserService;
+import com.luobo.service.user.UserPermissionService;
 import com.pandawork.core.bean.StaticAutoWire;
 import com.pandawork.core.exception.SSException;
 import com.pandawork.core.web.spring.controller.Base;
@@ -18,6 +20,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
 
 
 /**
@@ -50,7 +53,8 @@ public class AbstractController extends Base {
     protected final static String VIP_FORBIDDEN_PAGE = ADMIN_FORBIDDEN_PAGE;
     // 无法找到404页面
     protected final static String VIP_NOT_FOUND_PAGE = ADMIN_NOT_FOUND_PAGE;
-
+    protected  final SimpleDateFormat DEFAULT_FORMAT = new SimpleDateFormat("yyyyMMdd");
+    protected  final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd");
     /**
      * 当前用户ID
      */
@@ -193,5 +197,29 @@ public class AbstractController extends Base {
     @Qualifier("exchangeService")
     protected static ExchangeService exchangeService;
 
+/*    @StaticAutoWire
+    @Qualifier("loginService")
+    protected static LoginService loginService;*/
+
+
+    //登录Service
+    @StaticAutoWire
+    @Qualifier("loginManageService")
+    protected static LoginManageService loginManageService;
+
+    //用户
+    @StaticAutoWire
+    @Qualifier("userService")
+    protected static UserService userService;
+
+    //安全组Service
+    @StaticAutoWire
+    @Qualifier("userGroupService")
+    protected static UserGroupService userGroupService;
+
+    //权限Service
+    @StaticAutoWire
+    @Qualifier("userPermissionService")
+    protected static UserPermissionService userPermissionService;
 
 }

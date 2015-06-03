@@ -13,9 +13,9 @@
         SELECT
         r.id AS id,
         r.from_currency_id AS fromCurrencyId,
-        t1.name AS fromCurrrency,
+        t1.name AS fromCurrency,
         r.to_currency_id AS toCurrencyId,
-        t2.name AS toCurrrency,
+        t2.name AS toCurrency,
         r.rate AS rate,
         r.date AS `date`,
         r.created_time AS createdTime,
@@ -23,12 +23,52 @@
         FROM t_rate r
         LEFT JOIN t_currency t1 ON r.from_currency_id = t1.id
         LEFT JOIN t_currency t2 ON r.to_currency_id = t2.id
+        <where>
+            <if test="fromCurrencyId!=null">
+                r.from_currency_id  = #{fromCurrencyId}
+            </if>
+            <if test="toCurrencyId!=null">
+                AND r.to_currency_id = #{toCurrencyId}
+            </if>
+            <if test="date!=null">
+                AND r.date = #{date}
+            </if>
+        </where>
+        ORDER BY r.id DESC
+        limit #{offset},#{pageSize}
+    </select>
+    <select id="countRate" resultType="int">
+        SELECT COUNT(1)
+        FROM t_rate r
+        <where>
+            <if test="fromCurrencyId!=null">
+                r.from_currency_id  = #{fromCurrencyId}
+            </if>
+            <if test="toCurrencyId!=null">
+                AND r.to_currency_id = #{toCurrencyId}
+            </if>
+            <if test="date!=null">
+                AND r.date = #{date}
+            </if>
+        </where>
     </select>
 
     <select id="queryRateBySearch" resultMap="pw.Rate">
-        SELECT * FROM t_rate
-        WHERE from_currency_id = #{fromCurrencyId}
-        AND to_currency_id = #{toCurrencyId}
-        AND `date` = #{date}
+        SELECT
+        r.id AS id,
+        r.from_currency_id AS fromCurrencyId,
+        t1.name AS fromCurrency,
+        r.to_currency_id AS toCurrencyId,
+        t2.name AS toCurrency,
+        r.rate AS rate,
+        r.date AS `date`,
+        r.created_time AS createdTime,
+        r.last_modified_time AS lastModifiedTime
+        FROM t_rate r
+        LEFT JOIN t_currency t1 ON r.from_currency_id = t1.id
+        LEFT JOIN t_currency t2 ON r.to_currency_id = t2.id
+        WHERE r.from_currency_id = #{fromCurrencyId}
+        AND r.to_currency_id = #{toCurrencyId}
+        AND r.date = #{date}
     </select>
 </mapper>

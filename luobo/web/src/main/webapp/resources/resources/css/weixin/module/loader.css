@@ -1,0 +1,34 @@
+.ui-loader-default {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 2.875em;
+    margin-left: -1.4375em;
+    margin-top: -1.4375em;
+    opacity: 0.18;
+    width: 2.875em;
+}
+.ui-loader {
+    border: 0 none;
+    display: none;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    z-index: 9999999;
+}
+.ui-loader .ui-icon-loading {
+    background-color: #000;
+    border-radius: 2.25em;
+    display: block;
+    height: 2.75em;
+    margin: 0;
+    padding: 0.0625em;
+    width: 2.75em;
+}
+.ui-icon-loading {
+    background: url("images/ajax-loader.gif") repeat scroll 0 0 / 2.875em 2.875em rgba(0, 0, 0, 0);
+}
+.ui-loader-default h1 {
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
