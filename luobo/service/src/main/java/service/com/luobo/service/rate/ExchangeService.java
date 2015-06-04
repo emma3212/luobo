@@ -1,4 +1,4 @@
-package com.luobo.service;
+package com.luobo.service.rate;
 
 import com.pandawork.core.exception.SSException;
 

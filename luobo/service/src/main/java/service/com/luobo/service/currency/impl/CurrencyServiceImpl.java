@@ -1,10 +1,10 @@
-package com.luobo.service.impl;
+package com.luobo.service.currency.impl;
 
 import com.ebiz.base.util.Assert;
-import com.luobo.common.entity.Currency;
+import com.luobo.common.entity.currency.Currency;
 import com.luobo.common.exception.LuoboException;
-import com.luobo.mapper.CurrencyMapper;
-import com.luobo.service.CurrencyService;
+import com.luobo.mapper.currency.CurrencyMapper;
+import com.luobo.service.currency.CurrencyService;
 import com.pandawork.core.dao.CommonDao;
 import com.pandawork.core.exception.SSException;
 import com.pandawork.core.log.LogClerk;

@@ -1,4 +1,4 @@
-package com.luobo.web.controller;
+package com.luobo.web.controller.pub;
 
 import com.luobo.common.annotation.IgnoreAuthorization;
 import com.luobo.common.annotation.IgnoreLogin;

@@ -1,10 +1,8 @@
 package com.luo.pandawork.rate;
 
 import com.luo.pandawork.AbstractTestCase;
-import com.luobo.common.entity.Currency;
-import com.luobo.common.entity.Rate;
-import com.luobo.service.CurrencyService;
-import com.luobo.service.RateService;
+import com.luobo.common.entity.rate.Rate;
+import com.luobo.service.rate.RateService;
 import com.pandawork.core.exception.SSException;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.luobo.service;
+package com.luobo.service.rate;
 
-import com.luobo.common.entity.Rate;
+import com.luobo.common.entity.rate.Rate;
 import com.pandawork.core.exception.SSException;
 
 import javax.servlet.http.HttpServletResponse;

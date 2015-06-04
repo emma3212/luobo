@@ -1,9 +1,9 @@
-package com.luobo.web.controller;
+package com.luobo.web.controller.pub;
 
 import com.luobo.common.annotation.IgnoreAuthorization;
 import com.luobo.common.annotation.IgnoreLogin;
-import com.luobo.common.entity.Currency;
-import com.luobo.common.entity.Rate;
+import com.luobo.common.entity.currency.Currency;
+import com.luobo.common.entity.rate.Rate;
 import com.luobo.common.utils.DateUtils;
 import com.luobo.web.spring.AbstractController;
 import com.pandawork.core.exception.SSException;

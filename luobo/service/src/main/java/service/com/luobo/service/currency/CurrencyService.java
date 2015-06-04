@@ -1,6 +1,6 @@
-package com.luobo.service;
+package com.luobo.service.currency;
 
-import com.luobo.common.entity.Currency;
+import com.luobo.common.entity.currency.Currency;
 import com.pandawork.core.exception.SSException;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.luobo.web.controller;
+package com.luobo.web.controller.admin;
 
 import com.luobo.common.annotation.Module;
 import com.luobo.common.enums.ModuleEnums;

@@ -45,7 +45,7 @@
                                         <select class="J_brand" data-valid-tip="|原始货币选择有误，请重新选择" data-valid-rule="scale(0,1000)" name="toCurrencyId">
                                             <option value="0">--请选择--</option>
                                             <c:forEach items="${currencyList}" var="item">
-                                                <option value="${item.id}" <c:if test="${item.id == rate.fromCurrencyId}">selected="selected"</c:if>>${item.name} </option>
+                                                <option value="${item.id}" <c:if test="${item.id == rate.toCurrencyId}">selected="selected"</c:if>>${item.name} </option>
                                             </c:forEach>
                                         </select>
                                     </div>
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <div class="control-group password">
-                                    <label class="control-label " style="color:red;">利率</label>
+                                    <label class="control-label " style="color:red;">汇率</label>
                                     <div class="controls">
                                         ${rate.rate}
                                     </div>

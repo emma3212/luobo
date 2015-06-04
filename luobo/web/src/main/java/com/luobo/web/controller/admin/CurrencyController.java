@@ -1,7 +1,7 @@
-package com.luobo.web.controller;
+package com.luobo.web.controller.admin;
 
 import com.luobo.common.annotation.Module;
-import com.luobo.common.entity.Currency;
+import com.luobo.common.entity.currency.Currency;
 import com.luobo.common.enums.ModuleEnums;
 import com.luobo.web.spring.AbstractController;
 import com.pandawork.core.exception.SSException;

@@ -1,10 +1,10 @@
-package com.luobo.service.impl;
+package com.luobo.service.rate.impl;
 
 import com.ebiz.base.util.Assert;
-import com.luobo.common.entity.Rate;
+import com.luobo.common.entity.rate.Rate;
 import com.luobo.common.exception.LuoboException;
-import com.luobo.service.ExchangeService;
-import com.luobo.service.RateService;
+import com.luobo.service.rate.ExchangeService;
+import com.luobo.service.rate.RateService;
 import com.pandawork.core.exception.SSException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,4 +1,4 @@
-package com.luobo.common.entity;
+package com.luobo.common.entity.currency;
 
 import com.pandawork.core.entity.AbstractEntity;
 

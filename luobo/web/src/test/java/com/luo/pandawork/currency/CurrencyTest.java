@@ -1,8 +1,8 @@
 package com.luo.pandawork.currency;
 
 import com.luo.pandawork.AbstractTestCase;
-import com.luobo.common.entity.Currency;
-import com.luobo.service.CurrencyService;
+import com.luobo.common.entity.currency.Currency;
+import com.luobo.service.currency.CurrencyService;
 import com.pandawork.core.exception.SSException;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,6 @@
-package com.luobo.mapper;
+package com.luobo.mapper.rate;
 
-import com.luobo.common.entity.Currency;
-import com.luobo.common.entity.Rate;
+import com.luobo.common.entity.rate.Rate;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
