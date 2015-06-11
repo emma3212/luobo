@@ -8,7 +8,7 @@
     <tr data-order-id="&{it.id}">
         <td>&{it.id}</td>
         <td><a href="&{it.viewUrl}" target="_blank">&{it.fromCurrency}</a></td>
-        <td >&{it.toCurrency}</td>
+        <td >人民币</td>
         <td >&{it.rate}</td>
         <td>&{it.date}</td>
         <td>

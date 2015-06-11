@@ -60,12 +60,9 @@
                                         目标货币
                                         <span class="required">*</span></label>
                                     <div class="controls">
-                                        <select class="J_brand" data-valid-tip="|目标货币选择有误，请重新选择" data-valid-rule="scale(0,1000)" name="toCurrencyId">
-                                            <option value="0">--请选择--</option>
-                                            <c:forEach items="${currencyList}" var="item">
-                                                <option value="${item.id}" <c:if test="${item.id == rate.toCurrencyId}">selected="selected"</c:if>>${item.name} </option>
-                                            </c:forEach>
-                                        </select>
+                                         人民币
+                                        <input type="hidden" class="w200" name="toCurrencyId" value="1">
+
                                     </div>
                                 </div>
                                 <div class="control-group">

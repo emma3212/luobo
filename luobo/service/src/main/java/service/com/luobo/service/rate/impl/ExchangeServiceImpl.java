@@ -31,12 +31,25 @@ public class ExchangeServiceImpl implements ExchangeService {
                 Assert.lessOrEqualZero(toCurrencyId)){
             return null;
         }
-        Rate rate = new Rate();
-        BigDecimal r = new BigDecimal(1);
-        rate = rateService.queryRateBySearch(fromCurrencyId,toCurrencyId,date);
-        if(Assert.isNull(rate) && fromCurrencyId!=toCurrencyId){
-            throw SSException.get(LuoboException.RateNotExist);
+        if(fromCurrencyId==toCurrencyId){
+            return money;
+        }else{
+            Rate rate = new Rate();
+            BigDecimal r = new BigDecimal(1);
+            rate = rateService.queryRateBySearch(fromCurrencyId,toCurrencyId,date);
+            if(rate!=null)
+            return rate.getRate().multiply(money);
+            else {
+                Rate rate1 = new Rate();
+                rate1 = rateService.queryRateBySearch(fromCurrencyId,1,date);
+                Rate rate2 = new Rate();
+                rate2 = rateService.queryRateBySearch(toCurrencyId,1,date);
+                if(rate1==null || rate2==null){
+                    throw SSException.get(LuoboException.RateNotExist);
+                }
+                return rate1.getRate().subtract(rate2.getRate()).multiply(money);
+            }
         }
-        return rate.getRate().multiply(money);
+
     }
 }

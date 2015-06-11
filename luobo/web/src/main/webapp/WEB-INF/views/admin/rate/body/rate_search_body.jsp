@@ -40,7 +40,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="control-group">
+                        <%--<div class="control-group">
                             <label class="control-label">
                                 目标货币
                             </label>
@@ -52,7 +52,7 @@
                                     </c:forEach>
                                 </select>
                             </div>
-                        </div>
+                        </div>--%>
                         <div class="control-group">
                             <label class="control-label">
                                 日期
