@@ -3,6 +3,7 @@ package com.luobo.service.rate.impl;
 import com.ebiz.base.util.Assert;
 import com.luobo.common.entity.rate.Rate;
 import com.luobo.common.exception.LuoboException;
+import com.luobo.common.utils.DateUtils;
 import com.luobo.mapper.rate.RateMapper;
 import com.luobo.service.rate.RateService;
 import com.pandawork.core.dao.CommonDao;
@@ -86,12 +87,61 @@ public class RateServiceImpl implements RateService {
                 Assert.lessOrEqualZero(toCurrencyId)){
             return null;
         }
-        Rate rate = null;
+        Rate rate = new Rate();
         try {
             rate = rateMapper.queryRateBySearch(fromCurrencyId,toCurrencyId,date);
         }catch (Exception e){
             LogClerk.errLog.error(e);
             throw SSException.get(LuoboException.QueryRateFailed);
+        }
+
+        return rate;
+    }
+
+    @Override
+    public Rate queryRateByCondition(Integer fromCurrencyId, Integer toCurrencyId, Date date) throws SSException {
+        if(Assert.isNull(fromCurrencyId) ||
+                Assert.isNull(toCurrencyId)|| Assert.lessOrEqualZero(fromCurrencyId) ||
+                Assert.lessOrEqualZero(toCurrencyId)){
+            return null;
+        }
+        Rate rate = new Rate();
+        if(fromCurrencyId==1){
+            rate = this.queryRateBySearch(toCurrencyId,fromCurrencyId,date);
+            String a = rate.getToCurrency();
+            String b = rate.getFromCurrency();
+            Integer x = rate.getFromCurrencyId();
+            Integer y = rate.getToCurrencyId();
+            rate.setFromCurrencyId(y);
+            rate.setToCurrencyId(x);
+            rate.setToCurrency(b);
+            rate.setFromCurrency(a);
+            rate.setDateString(DateUtils.formatDate(rate.getDate()));
+        }else {
+            rate = this.queryRateBySearch(fromCurrencyId, toCurrencyId, date);
+            Rate rate1 = new Rate();
+            Rate rate2 = new Rate();
+            if(rate!=null){
+                rate.setDateString(DateUtils.formatDate(rate.getDate()));
+            }else{
+                try{
+                    rate1 = this.queryRateBySearch(fromCurrencyId, 1, date);
+                    rate2 = this.queryRateBySearch(toCurrencyId, 1, date);
+                }catch (SSException e){
+                    LogClerk.errLog.error(e);
+                    throw SSException.get(LuoboException.RateNotExist);
+                }
+                if(rate1!=null && rate2!=null){
+                    rate = new Rate();
+                    rate.setFromCurrency(rate1.getFromCurrency());
+                    rate.setFromCurrencyId(rate1.getFromCurrencyId());
+                    rate.setToCurrency(rate2.getFromCurrency());
+                    rate.setToCurrencyId(rate2.getFromCurrencyId());
+                    rate.setRate(rate1.getRate().divide(rate2.getRate(),4,BigDecimal.ROUND_HALF_UP));
+                    rate.setDate(date);
+                    rate.setDateString(DateUtils.formatDate(rate1.getDate()));
+                }
+            }
         }
         return rate;
     }

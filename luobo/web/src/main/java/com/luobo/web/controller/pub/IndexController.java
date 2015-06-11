@@ -35,6 +35,7 @@ public class IndexController extends AbstractController {
         List<Currency> currencyList = new ArrayList<Currency>();
         BigDecimal result = null;
         Rate rate = new Rate();
+
         Date date1 = new Date();
         if(date==null){
            date=date1;
@@ -42,16 +43,14 @@ public class IndexController extends AbstractController {
         try{
             currencyList = currencyService.listCurrency();
             result =   exchangeService.getResult(fromCurrencyId,toCurrencyId,date,money);
-            rate = rateService.queryRateBySearch(fromCurrencyId,toCurrencyId,date);
+            rate = rateService.queryRateByCondition(fromCurrencyId,toCurrencyId,date);
         }catch (SSException e){
             LogClerk.errLog.error(e);
             model.addAttribute("errMsg",e.getMessage());
             return "other/index";
         }
 
-        if(rate!=null){
-            rate.setDateString(DateUtils.formatDate(rate.getDate()));
-        }
+
         model.addAttribute("money",money);
         model.addAttribute("currencyList",currencyList);
         model.addAttribute("result",result);

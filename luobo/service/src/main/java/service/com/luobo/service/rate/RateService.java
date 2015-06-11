@@ -45,6 +45,10 @@ public interface RateService {
                                   Integer toCurrencyId,
                                   Date date) throws SSException;
 
+    public Rate queryRateByCondition(Integer fromCurrencyId,
+                                     Integer toCurrencyId,
+                                     Date date) throws SSException;
+
     /**
      * 列表
      * @param fromCurrencyId

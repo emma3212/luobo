@@ -31,11 +31,19 @@ public class ExchangeServiceImpl implements ExchangeService {
                 Assert.lessOrEqualZero(toCurrencyId)){
             return null;
         }
+
+
         if(fromCurrencyId==toCurrencyId){
             return money;
         }else{
             Rate rate = new Rate();
-            BigDecimal r = new BigDecimal(1);
+            if(fromCurrencyId==1){
+                rate = rateService.queryRateBySearch(toCurrencyId,fromCurrencyId,date);
+                if(rate==null){
+                    throw SSException.get(LuoboException.RateNotExist);
+                }
+                return new BigDecimal(1).divide(rate.getRate(), 4, BigDecimal.ROUND_HALF_UP).multiply(money);
+            }
             rate = rateService.queryRateBySearch(fromCurrencyId,toCurrencyId,date);
             if(rate!=null)
             return rate.getRate().multiply(money);
@@ -47,7 +55,7 @@ public class ExchangeServiceImpl implements ExchangeService {
                 if(rate1==null || rate2==null){
                     throw SSException.get(LuoboException.RateNotExist);
                 }
-                return rate1.getRate().subtract(rate2.getRate()).multiply(money);
+                return rate1.getRate().divide(rate2.getRate(), 4, BigDecimal.ROUND_HALF_UP).multiply(money);
             }
         }
 
