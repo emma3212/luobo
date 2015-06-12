@@ -22,9 +22,13 @@ import net.sf.json.JSONObject;
 public class QueryRate {
     public static void main(String[] args) {
         String city = "suzhou";//参数
-        String url = "http://op.juhe.cn/onebox/exchange/list";//url为请求的api接口地址
+        String url = "http://op.juhe.cn/onebox/exchange/currency?";//url为请求的api接口地址
+        String from = "JPY";
+        String to = "BHD";
         String key= "8b8901dd0240680466765e05f9875793";//申请的对应key
-        String urlAll = new StringBuffer(url).append(city).append("&key=").append(key).toString();
+        String urlAll = new StringBuffer(url).
+                append("&key=").append(key).append("&type=json").
+                append("&from=").append(from).append("&to=").append(to).toString();
         String charset ="UTF-8";
         String jsonResult = get(urlAll, charset);//得到JSON字符串
         JSONObject object = JSONObject.fromObject(jsonResult);//转化为JSON类
@@ -33,7 +37,8 @@ public class QueryRate {
         if(code.equals("0")){
             //根据需要取得数据
             JSONObject jsonObject =  (JSONObject)object.getJSONArray("result").get(0);
-            System.out.println(jsonObject.getJSONObject("citynow").get("AQI"));
+            System.out.println(jsonObject);
+       //     System.out.println(jsonObject.getJSONObject("citynow").get("AQI"));
         }else{
             System.out.println("error_code:"+code+",reason:"+object.getString("reason"));
         }

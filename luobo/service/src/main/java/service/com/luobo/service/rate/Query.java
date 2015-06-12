@@ -8,6 +8,7 @@ package com.luobo.service.rate;
         import java.net.HttpURLConnection;
         import java.net.URL;
 
+        import net.sf.json.JSONArray;
         import net.sf.json.JSONObject;
 
 /**
@@ -22,13 +23,24 @@ public class Query {
         String urlAll = new StringBuffer(url).append("?key=").append(key).append("&type=json").toString();
         String charset ="UTF-8";
         String jsonResult = get(urlAll, charset);//得到JSON字符串
-        JSONObject object = JSONObject.fromObject(jsonResult);//转化为JSON类
+        JSONObject object = JSONObject.fromObject(jsonResult);//转化为JSON类】
+        System.out.println(object);
         String code = object.getString("error_code");//得到错误码
         //错误码判断
         if(code.equals("0")){
             //根据需要取得数据
-            JSONObject jsonObject =  (JSONObject)object.getJSONArray("result").get(0);
-            System.out.println(jsonObject.getJSONObject("citynow").get("AQI"));
+            System.out.println(object.get("result"));
+            JSONObject jsonObject1 =  (JSONObject)object.get("result");
+            System.out.println(jsonObject1);
+            JSONArray array = jsonObject1.getJSONArray("list");
+
+            for(int i=0;i<array.size();i++){
+                String name = (String)JSONObject.fromObject(array.get(i)).get("name");
+                String code1 = (String)JSONObject.fromObject(array.get(i)).get("code");
+                System.out.println(name + ":" + code1);
+            }
+            //JSONObject jsonObject =  (JSONObject)object.getJSONArray("result").get(0);
+          //  System.out.println(jsonObject.getJSONObject("citynow").get("AQI"));
         }else{
             System.out.println("error_code:"+code+",reason:"+object.getString("reason"));
         }
